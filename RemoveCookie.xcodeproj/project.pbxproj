@@ -26,7 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D47D23FA1666BF47000324DB /* RemoveCookie */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RemoveCookie; sourceTree = BUILT_PRODUCTS_DIR; };
+		D47D23FA1666BF47000324DB /* removecookie */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = removecookie; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47D23FE1666BF47000324DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D47D24011666BF47000324DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D47D24041666BF47000324DB /* RemoveCookie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RemoveCookie-Prefix.pch"; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		D47D23FB1666BF47000324DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D47D23FA1666BF47000324DB /* RemoveCookie */,
+				D47D23FA1666BF47000324DB /* removecookie */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,7 +105,7 @@
 			);
 			name = RemoveCookie;
 			productName = RemoveCookie;
-			productReference = D47D23FA1666BF47000324DB /* RemoveCookie */;
+			productReference = D47D23FA1666BF47000324DB /* removecookie */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -172,7 +172,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
@@ -195,7 +195,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};
@@ -204,7 +204,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RemoveCookie/RemoveCookie-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = removecookie;
 			};
 			name = Debug;
 		};
@@ -213,7 +213,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RemoveCookie/RemoveCookie-Prefix.pch";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = removecookie;
 			};
 			name = Release;
 		};
