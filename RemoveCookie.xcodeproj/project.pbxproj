@@ -202,18 +202,22 @@
 		D47D240A1666BF47000324DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RemoveCookie/RemoveCookie-Prefix.pch";
 				PRODUCT_NAME = removecookie;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		D47D240B1666BF47000324DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RemoveCookie/RemoveCookie-Prefix.pch";
 				PRODUCT_NAME = removecookie;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
