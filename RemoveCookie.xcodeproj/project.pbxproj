@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D47D23FF1666BF47000324DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D47D23FE1666BF47000324DB /* Foundation.framework */; };
 		D47D24021666BF47000324DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D47D24011666BF47000324DB /* main.m */; };
-		D47D24061666BF47000324DB /* RemoveCookie.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D47D24051666BF47000324DB /* RemoveCookie.1 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -19,7 +18,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				D47D24061666BF47000324DB /* RemoveCookie.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -30,7 +28,6 @@
 		D47D23FE1666BF47000324DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D47D24011666BF47000324DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D47D24041666BF47000324DB /* RemoveCookie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RemoveCookie-Prefix.pch"; sourceTree = "<group>"; };
-		D47D24051666BF47000324DB /* RemoveCookie.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = RemoveCookie.1; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				D47D24011666BF47000324DB /* main.m */,
-				D47D24051666BF47000324DB /* RemoveCookie.1 */,
 				D47D24031666BF47000324DB /* Supporting Files */,
 			);
 			path = RemoveCookie;
@@ -206,7 +202,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RemoveCookie/RemoveCookie-Prefix.pch";
 				PRODUCT_NAME = removecookie;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Debug;
 		};
@@ -217,7 +213,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RemoveCookie/RemoveCookie-Prefix.pch";
 				PRODUCT_NAME = removecookie;
-				SDKROOT = macosx;
+				SDKROOT = macosx10.7;
 			};
 			name = Release;
 		};

@@ -21,9 +21,9 @@ void IFPrint (NSString *format, ...) {
 
 int main(int argc, const char * argv[])
 {
-    NSString *urlSearchString = nil;
+    NSString *urlSearchString;
     if (argc > 1) {
-        urlSearchString = [NSString stringWithUTF8String:argv[1]];
+        urlSearchString = [[NSString alloc] initWithUTF8String:argv[1]];
     }
     else {
         IFPrint(@"No URL provided, quitting.");
@@ -32,7 +32,7 @@ int main(int argc, const char * argv[])
     
     NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
     
-    NSString *filterString = [NSString stringWithFormat:@"domain ENDSWITH '%@'", urlSearchString];
+    NSString *filterString = [[NSString alloc] initWithFormat:@"domain ENDSWITH '%@'", urlSearchString];
     NSPredicate *filter = [NSPredicate predicateWithFormat:filterString];
     
     NSArray *matchedCookies = [cookieStorage.cookies filteredArrayUsingPredicate:filter];
@@ -40,9 +40,8 @@ int main(int argc, const char * argv[])
     for (int i = 0; i < matchedCookies.count; i++) {
         [cookieStorage deleteCookie:[matchedCookies objectAtIndex:i]];
     }
-    
+
     IFPrint(@"Removed %li cookies", matchedCookies.count);
     return 0;
-        
 }
 
