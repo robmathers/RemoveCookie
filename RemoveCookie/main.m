@@ -21,27 +21,29 @@ void IFPrint (NSString *format, ...) {
 
 int main(int argc, const char * argv[])
 {
-    NSString *urlSearchString;
-    if (argc > 1) {
-        urlSearchString = [[NSString alloc] initWithUTF8String:argv[1]];
-    }
-    else {
-        IFPrint(@"No URL provided, quitting.");
-        return 1;
-    }
-    
-    NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
-    
-    NSString *filterString = [[NSString alloc] initWithFormat:@"domain ENDSWITH '%@'", urlSearchString];
-    NSPredicate *filter = [NSPredicate predicateWithFormat:filterString];
-    
-    NSArray *matchedCookies = [cookieStorage.cookies filteredArrayUsingPredicate:filter];
+    @autoreleasepool {
+        NSString *urlSearchString;
+        if (argc > 1) {
+            urlSearchString = [[NSString alloc] initWithUTF8String:argv[1]];
+        }
+        else {
+            IFPrint(@"No URL provided, quitting.");
+            return 1;
+        }
+        
+        NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        
+        NSString *filterString = [[NSString alloc] initWithFormat:@"domain ENDSWITH '%@'", urlSearchString];
+        NSPredicate *filter = [NSPredicate predicateWithFormat:filterString];
+        
+        NSArray *matchedCookies = [cookieStorage.cookies filteredArrayUsingPredicate:filter];
 
-    for (int i = 0; i < matchedCookies.count; i++) {
-        [cookieStorage deleteCookie:[matchedCookies objectAtIndex:i]];
-    }
+        for (int i = 0; i < matchedCookies.count; i++) {
+            [cookieStorage deleteCookie:[matchedCookies objectAtIndex:i]];
+        }
 
-    IFPrint(@"Removed %li cookies", matchedCookies.count);
-    return 0;
+        IFPrint(@"Removed %li cookies", matchedCookies.count);
+        return 0;
+    }
 }
 

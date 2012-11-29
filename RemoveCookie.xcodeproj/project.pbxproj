@@ -214,6 +214,7 @@
 				GCC_PREFIX_HEADER = "RemoveCookie/RemoveCookie-Prefix.pch";
 				PRODUCT_NAME = removecookie;
 				SDKROOT = macosx10.7;
+				STRIP_INSTALLED_PRODUCT = YES;
 			};
 			name = Release;
 		};
