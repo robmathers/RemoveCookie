@@ -1,6 +1,8 @@
 # RemoveCookie
 A command line utility for OS X to remove Safari cookies for a specified domain.
 
+**[Download Link][]**
+
 ## Usage
 
     removecoookie example.com
@@ -11,3 +13,5 @@ A command line utility for OS X to remove Safari cookies for a specified domain.
 I've done virtually no testing. It works for me on OS X 10.7.5 with Safari 6.0.2. It should work with most recent versions of Safari on OS X 10.7 and 10.8. It will likely work with 10.6 (and possibly earlier), but you may need to change the build settings in Xcode.
 
 RemoveCookie is provided as-is with no warranty or guarantee of any kind. You're free to use or modify it however you like for non-commercial use. If you come up with any useful or interesting modifications, feel free to submit a pull request.
+
+[download link]: https://github.com/downloads/robmathers/RemoveCookie/removecookie-1.0.zip
