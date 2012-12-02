@@ -24,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D43A5F6A166AD863002EC354 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		D47D23FA1666BF47000324DB /* removecookie */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = removecookie; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47D23FE1666BF47000324DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D47D24011666BF47000324DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 				D47D24001666BF47000324DB /* RemoveCookie */,
 				D47D23FD1666BF47000324DB /* Frameworks */,
 				D47D23FB1666BF47000324DB /* Products */,
+				D43A5F6A166AD863002EC354 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,6 +239,7 @@
 				D47D240B1666BF47000324DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
