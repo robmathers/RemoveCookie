@@ -30,8 +30,16 @@ int main(int argc, const char * argv[])
             IFPrint(@"No URL provided, quitting.");
             return 1;
         }
+        NSHTTPCookieStorage *cookieStorage;
         
-        NSHTTPCookieStorage *cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        // Safari cookies in 10.11+ need to be accessed with sharedCookieStorageForGroupContainerIdentifier:
+        // per http://stackoverflow.com/questions/32921572/stringwithcontentsofurl-cookie-jar-in-el-capitan
+        if ([[NSHTTPCookieStorage class] respondsToSelector:@selector(sharedCookieStorageForGroupContainerIdentifier:)]) {
+            cookieStorage = [NSHTTPCookieStorage sharedCookieStorageForGroupContainerIdentifier:@"Cookies"];
+        }
+        else {
+            cookieStorage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+        }
         
         NSString *filterString = [[NSString alloc] initWithFormat:@"domain ENDSWITH '%@'", urlSearchString];
         NSPredicate *filter = [NSPredicate predicateWithFormat:filterString];
